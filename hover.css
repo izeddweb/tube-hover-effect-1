@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root{
+  --text-color:#efefef;
+  --main-gradient-color:radial-gradient( #f178b5 ,#3c067a);
+  --content-color:rgb(29, 27, 27);
+}
+body{
+  background: var(--main-gradient-color) no-repeat;
+  font-family: 'Lobster', cursive;
+
+}
+.title{
+  text-align: center;
+  color: var(--text-color);
+}
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 93vh;
+  background-color: var(--content-color);
+}
+.cards{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 400px;
+  width: 200px;
+  background: var( --main-gradient-color);
+  border-radius: 8px;
+  position: relative;
+  transition: 1s ease-in-out;
+}
+.card-1,
+.card-2,
+.card-3{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  border-radius: 8px;
+  border: 3px solid black ;
+}
+h4{
+  color: #e64030;
+  position: absolute;
+  cursor: pointer;
+  font-weight: bolder;
+  font-family: 'Lobster', cursive;
+  letter-spacing: 2px;
+  font-size: 30px;
+  top: 35%;
+  left: 40%;
+
+}
+.card-1{
+  z-index: 2;
+  background: url(/img/acse.jpg) no-repeat;
+  background-size: cover;
+}
+.card-2{
+  z-index: 3;
+  background: url(/img/luffy.jpg) no-repeat;
+  background-size: cover;
+}
+.card-3{
+  z-index: 2;
+  background: url(/img/Sabo.jpg) no-repeat;
+  background-size: cover;
+}
+.cards:hover .card-1{
+  transform: translate(100%) translateY(9%);
+  transition: .7s ease-in-out;
+  height: 90%;
+  width: 90%;
+}
+.cards:hover .card-3{
+  transform: translate(-98%)  translateY(9%);
+  transition: .7s ease-in-out;
+  height: 90%;
+  width: 90%;
+}
